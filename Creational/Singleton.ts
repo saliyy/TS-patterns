@@ -5,9 +5,13 @@ class DataBaseConnection {
 
     public static getInstance() {
         if (!this.connection) {
-            return new DataBaseConnection()
+            this.connection = new DataBaseConnection()
         }
 
         return this.connection
     }
 }
+
+
+const db = DataBaseConnection.getInstance()
+
